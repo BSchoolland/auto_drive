@@ -47,7 +47,7 @@ class MyModel(pl.LightningModule):
         return loss
 
     def configure_optimizers(self):
-        return torch.optim.SGD(self.model.parameters(), lr=20)
+        return torch.optim.SGD(self.model.parameters(), lr=1)
 
 # Start HTTP server in background thread
 server_thread = start_server_thread(loss_data)
